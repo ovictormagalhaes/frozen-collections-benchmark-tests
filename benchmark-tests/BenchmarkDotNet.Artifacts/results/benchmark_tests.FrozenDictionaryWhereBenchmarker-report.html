@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>benchmark_tests.FrozenDictionaryWhereBenchmarker-20230916-223954</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet v0.13.8, macOS Ventura 13.1 (22C65) [Darwin 22.2.0]
+Apple M1, 1 CPU, 8 logical and 8 physical cores
+.NET SDK 8.0.100-rc.1.23463.5
+  [Host]     : .NET 8.0.0 (8.0.23.41904), Arm64 RyuJIT AdvSIMD
+  DefaultJob : .NET 8.0.0 (8.0.23.41904), Arm64 RyuJIT AdvSIMD
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>Method            </th><th>Mean</th><th>Error</th><th>StdDev</th><th>Rank</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>DictionaryWhere</td><td>9.811 ns</td><td>0.0367 ns</td><td>0.0307 ns</td><td>1</td><td>56 B</td>
+</tr><tr><td>FrozenDictionaryWhere</td><td>10.277 ns</td><td>0.0444 ns</td><td>0.0394 ns</td><td>2</td><td>56 B</td>
+</tr><tr><td>ImmutableDictionaryWhere</td><td>10.709 ns</td><td>0.0807 ns</td><td>0.0715 ns</td><td>3</td><td>56 B</td>
+</tr></tbody></table>
+</body>
+</html>
